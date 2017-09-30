@@ -16,6 +16,7 @@ margin-top: 15vh;
 padding: 3vh 0;
 color: white;
 text-align: center;
+word-wrap: normal
 `
 const Top = styled.div`
 border-bottom: 1px solid white;
