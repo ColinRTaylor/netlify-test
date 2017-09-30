@@ -16,12 +16,17 @@ class ContactForm extends React.Component {
   /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = e => {
-    fetch("/", {
+    e.preventDefault();
+    const action = this.form.getAttribute("action")
+    fetch(action, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => console.log("Success!"))
+      .then(() => {
+        this.props.toggle();
+        console.log("Success!")
+      })
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -43,7 +48,10 @@ class ContactForm extends React.Component {
 
         </form>
 
-        <StyledForm onSubmit={this.handleSubmit} name="contact" >
+        <StyledForm
+          onSubmit={this.handleSubmit}
+          data-netlify="true" name="contact" action="contact"
+          innerRef={(e) => this.form = e}>
           <h2>Contact Us</h2>
           <div>
             <StyledLabel>
@@ -65,7 +73,7 @@ class ContactForm extends React.Component {
           </div>
           <button style={{ margin: "2vh 0" }} type="submit">Send</button>
         </StyledForm>
-      </div>
+      </div >
     );
   }
 }

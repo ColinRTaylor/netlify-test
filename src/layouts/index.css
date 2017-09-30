@@ -638,3 +638,15 @@ button {
   border-radius: 4px;
   background-color: #FFFFFF;
 }
+input[type="email"], input[type="text"], textarea {
+  border: 1px solid gray;
+}
+.modal {
+  background: #fff;
+  color: 'lightsteelblue';
+  height: 60%;
+  margin: 40px auto;
+  width: 60%;
+  padding: 20px;
+
+}

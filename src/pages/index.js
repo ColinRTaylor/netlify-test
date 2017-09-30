@@ -36,14 +36,16 @@ class IndexPage extends React.Component {
     return (<ReactModal
       isOpen={this.state.open}
       contentLabel="Contact Us"
+      className={{ base: 'modal', }}
+      shouldCloseOnOverlayClick={true}
+      toggle={this.toggle}
       style={{
         overlay: {
-          backgroundColor: 'transparent'
+          backgroundColor: 'rgba(16, 11, 11, 0.55)'
 
         },
         content: {
-          color: 'lightsteelblue',
-          height: '60%'
+
         }
       }}
     > <CloseButton onClick={this.toggle}>X</CloseButton>
