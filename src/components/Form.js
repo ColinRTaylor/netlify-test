@@ -21,7 +21,7 @@ class ContactForm extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(() => console.log("Success!"))
       .catch(error => alert(error));
 
     e.preventDefault();
@@ -43,7 +43,7 @@ class ContactForm extends React.Component {
 
         </form>
 
-        <StyledForm onSubmit={this.handleSubmit}>
+        <StyledForm onSubmit={this.handleSubmit} name="contact" >
           <h2>Contact Us</h2>
           <div>
             <StyledLabel>
