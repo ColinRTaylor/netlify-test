@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
+import ReactModal from 'react-modal';
+import Form from "../components/Form"
 import image from "../image.jpg"
 const Wrapper = styled.div`
 background: url(${image}) no-repeat center center fixed;
@@ -22,15 +24,50 @@ const Top = styled.div`
 border-bottom: 1px solid white;
 margin: 3vh 0;
 `
-const IndexPage = () => (
-  <Wrapper>
-    <Inner>
-      <Top>
-        <h1>Jessie and Colin</h1>
-      </Top>
-      <h2>Coming Soon</h2>
-    </Inner>
-  </Wrapper>
-)
+
+class IndexPage extends React.Component {
+  state = {
+    open: false
+  }
+  toggle = () => {
+    this.setState({ open: !this.state.open })
+  }
+  renderModal() {
+    return (<ReactModal
+      isOpen={this.state.open}
+      contentLabel="Contact Us"
+      style={{
+        overlay: {
+          backgroundColor: 'transparent'
+
+        },
+        content: {
+          color: 'lightsteelblue',
+          height: '60%'
+        }
+      }}
+    > <CloseButton onClick={this.toggle}>X</CloseButton>
+      <Form />
+
+    </ReactModal>)
+  }
+  render() {
+    return (
+      <Wrapper>
+        <Inner>
+          <Top>
+            <h1>Jessie and Colin</h1>
+          </Top>
+          <h2>Coming Soon</h2>
+          <button onClick={this.toggle}>Contact Us</button>
+          {this.renderModal()}
+        </Inner>
+      </Wrapper>
+    )
+  }
+}
+const CloseButton = styled.span`
+cursor: pointer;
+`
 
 export default IndexPage
