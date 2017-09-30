@@ -21,7 +21,10 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Jessie Frederick and Colin Taylor wedding site' },
         { name: 'keywords', content: 'Jessie Frederick,Jessie, Frederick ,Colin Taylor, Colin, Taylor, wedding, married' },
       ]}
-    />
+    >
+      <link rel="shortcut icon" href="static/favicon.ico" />
+
+    </Helmet>
     <Wrapper>
       {children()}
     </Wrapper>
