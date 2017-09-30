@@ -61,8 +61,6 @@ class IndexPage extends React.Component {
             <h1>Jessie and Colin</h1>
           </Top>
           <h2>Coming Soon</h2>
-          <button onClick={this.toggle}>Contact Us</button>
-          {this.renderModal()}
         </Inner>
       </Wrapper>
     )
