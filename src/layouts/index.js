@@ -2,58 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
+import styled from 'styled-components';
 
 import './index.css'
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+const Wrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div style={{ width: '100%', height: '100%' }}>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Jessie and Colin"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Jessie Frederick and Colin Taylor wedding site' },
+        { name: 'keywords', content: 'Jessie Frederick,Jessie, Frederick ,Colin Taylor, Colin, Taylor, wedding, married' },
       ]}
     />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
+    <Wrapper>
       {children()}
-    </div>
+    </Wrapper>
   </div>
 )
 
