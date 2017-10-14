@@ -2,7 +2,7 @@ import React from "react";
 import Link from "gatsby-link";
 import ReactModal from "react-modal";
 import Form from "../components/Form";
-import { Inner, Nav, Top, Wrapper } from "./index-style";
+import { Inner, Nav, Top, Wrapper } from "../index-style";
 
 class IndexPage extends React.Component {
   state = {

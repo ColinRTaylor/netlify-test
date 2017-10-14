@@ -1,5 +1,5 @@
 import React from "react";
-import { Content } from "../pages/index-style";
+import { Content } from "../index-style";
 
 const Wedding = () => {
   return (

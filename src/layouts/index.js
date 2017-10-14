@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import styled from "styled-components";
-import { Inner, Nav, Top, Wrapper } from "../pages/index-style";
+import { Inner, Nav, Top, Wrapper } from "../index-style";
 
 import "./index.css";
 
-const NavLinks = styled(Link)`
-  color: black;
+const NavLink = styled(Link)`
+  color: #68849c;
   font-size: 18px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  &.active {
+    border-bottom: 1px solid gray;
+  }
 `;
 
 const TemplateWrapper = ({ children }) => (
@@ -32,11 +37,21 @@ const TemplateWrapper = ({ children }) => (
     </Helmet>
     <div className="wrapper">
       <Nav>
-        <Link to="/wedding">Wedding</Link>
-        <Link to="/details">Details</Link>
-        <Link to="/rsvp">RSVP</Link>
-        <Link to="/guest-book">Guest Book</Link>
-        <Link to="/photos">Photos</Link>
+        {/* <NavLink activeClassName="active" to="/wedding">
+          Wedding
+        </NavLink> */}
+        <NavLink activeClassName="active" to="/details">
+          Details
+        </NavLink>
+        <NavLink activeClassName="active" to="/rsvp">
+          RSVP
+        </NavLink>
+        <NavLink activeClassName="active" to="/guest-book">
+          Guest Book
+        </NavLink>
+        <NavLink activeClassName="active" to="/photos">
+          Photos
+        </NavLink>
       </Nav>
       {children()}
     </div>

@@ -1,4 +1,4 @@
-import image from "../image.jpg";
+import image from "./image.jpg";
 import styled from "styled-components";
 const colors = {
   white: "#fff"
@@ -34,9 +34,11 @@ export const Nav = styled.nav`
 `;
 
 export const Content = styled.div`
+  overflow: auto;
   background: ${colors.white};
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 48px;
 `;

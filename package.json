@@ -8,6 +8,8 @@
     "gatsby-link": "^1.6.15",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-styled-components": "^1.0.5",
+    "react-disqus-thread": "^0.4.0",
+    "react-google-maps": "^8.5.0",
     "react-modal": "^2.3.2",
     "styled-components": "^2.2.0"
   },
