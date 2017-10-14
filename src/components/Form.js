@@ -13,7 +13,6 @@ class ContactForm extends React.Component {
     this.state = { name: "", email: "", message: "" };
   }
 
-  /* Here’s the juicy bit for posting the form submission */
 
   handleSubmit = e => {
     e.preventDefault();
