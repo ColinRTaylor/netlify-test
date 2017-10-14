@@ -23,6 +23,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gatsby-plugin-manifest": "^1.0.8",
+    "gatsby-plugin-sitemap": "^1.2.5",
     "prettier": "^1.6.1"
   }
 }
