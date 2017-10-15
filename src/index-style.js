@@ -42,5 +42,9 @@ export const Content = styled.div`
   justify-content: space-around;
   flex-direction: column;
   align-items: flex-start;
-  padding: 48px;
+  padding: 0 48px 48px;
+
+  h2:first-child {
+    margin-top: 48px;
+  }
 `;
