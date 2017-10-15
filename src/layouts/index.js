@@ -37,7 +37,7 @@ const TemplateWrapper = ({ children }) => (
     </Helmet>
     <div className="wrapper">
       <Nav>
-        {/* <NavLink activeClassName="active" to="/wedding">
+        {/* <NavLink activeClassName="active" to="/">
           Wedding
         </NavLink> */}
         <NavLink activeClassName="active" to="/details">

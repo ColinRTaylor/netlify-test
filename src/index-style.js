@@ -24,6 +24,8 @@ export const Top = styled.div`
 
 export const Nav = styled.nav`
   top: 0;
+  right: 0;
+  left: 0;
   width: 100%;
   position: fixed;
   height: 48px;
