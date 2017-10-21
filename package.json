@@ -1,32 +1,21 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "html5up-dimension",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "dependencies": {
-    "gatsby": "^1.9.36",
-    "gatsby-link": "^1.6.15",
-    "gatsby-plugin-react-helmet": "^1.0.5",
-    "gatsby-plugin-styled-components": "^1.0.5",
-    "react-disqus-thread": "^0.4.0",
-    "react-google-maps": "^8.5.0",
-    "react-modal": "^2.3.2",
-    "styled-components": "^2.2.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
+  "description": "Dimension by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-css": "node-sass-chokidar --include-path ./assets/sass --include-path ./node_modules ./assets/sass/main.scss -o assets/css/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./assets/sass --include-path ./node_modules assets/sass/ -o assets/css/ --watch --recursive",
+    "build-js": "gulp scripts"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "gatsby-plugin-manifest": "^1.0.8",
-    "gatsby-plugin-sitemap": "^1.2.5",
-    "prettier": "^1.6.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "node-sass-chokidar": "0.0.3"
   }
 }
